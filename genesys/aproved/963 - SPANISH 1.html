@@ -1024,7 +1024,7 @@
                         let hrmRefine = document.getElementById("hrmRefine");
                         // Check if the dynamic data does not match the meal plan and the guest type is "Member"
                         if (mp2.trim() !== "European plan (no meals)" && hrmresort.trim() === "THE ROYAL HACIENDAS") {
-                            hrmRefine.style.display = "inline"; // Hide the EP line
+                            hrmRefine.style.display = "inline-table"; // Hide the EP line
                         }else {
                             hrmRefine.style.display = "none"; // Hide the element
                         }
@@ -1083,7 +1083,7 @@
                         let grmRefine = document.getElementById("grmRefine");
                         // Check if the dynamic data does not match the meal plan and the guest type is "Member"
                         if (mp3.trim() !== "European plan (no meals)" && grmresort.trim() === "GRAND RESIDENCES RIVIERA MORELOS") {
-                            grmRefine.style.display = "inline"; // Hide the EP line
+                            grmRefine.style.display = "inline-table"; // Hide the EP line
                         }else {
                             grmRefine.style.display = "none"; // Hide the element
                         }
@@ -1187,7 +1187,7 @@
                                                                     let rsmerchant = document.getElementById("rsmerchant");
                                                                     // Check if the meal plan is not "European plan (no meals)" and the resort is either "THE ROYAL SANDS" or "THE ROYAL CANCUN"
                                                                     if (resortrs.trim() === "THE ROYAL SANDS" ) {
-                                                                        rsmerchant.style.display = "inline"; // Show the element
+                                                                        rsmerchant.style.display = "inline-table"; // Show the element
                                                                     } else {
                                                                         rsmerchant.style.display = "none"; // Hide the element
                                                                     }
@@ -1205,7 +1205,7 @@
                                                                     let cicmerchant = document.getElementById("cicmerchant");
                                                                     // Check if the meal plan is not "European plan (no meals)" and the resort is either "THE ROYAL SANDS" or "THE ROYAL CANCUN"
                                                                     if (resortcic.trim() === "THE ROYAL CANCUN" ) {
-                                                                        cicmerchant.style.display = "inline"; // Show the element
+                                                                        cicmerchant.style.display = "inline-table"; // Show the element
                                                                     } else {
                                                                         cicmerchant.style.display = "none"; // Hide the element
                                                                     }
@@ -1223,7 +1223,7 @@
                                                                     let hrmmerchant = document.getElementById("hrmmerchant");
                                                                     // Check if the dynamic data does not match the meal plan and the guest type is "Member"
                                                                     if ( resorthrm.trim() === "THE ROYAL HACIENDAS") {
-                                                                        hrmmerchant.style.display = "inline"; // Hide the EP line
+                                                                        hrmmerchant.style.display = "inline-table"; // Hide the EP line
                                                                     }else {
                                                                         hrmmerchant.style.display = "none"; // Hide the element
                                                                     }
@@ -1241,7 +1241,7 @@
                                                                     let grmmerchant = document.getElementById("grmmerchant");
                                                                     // Check if the dynamic data does not match the meal plan and the guest type is "Member"
                                                                     if (resortgrm.trim() === "GRAND RESIDENCES RIVIERA MORELOS") {
-                                                                        grmmerchant.style.display = "inline"; // Hide the EP line
+                                                                        grmmerchant.style.display = "inline-table"; // Hide the EP line
                                                                     }else {
                                                                         grmmerchant.style.display = "none"; // Hide the element
                                                                     }
