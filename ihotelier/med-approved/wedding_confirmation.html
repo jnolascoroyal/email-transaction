@@ -1,0 +1,974 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>@import url(https://p.typekit.net/p.css?s=1&k=mxr0ydk&ht=tk&f=16353.37457.37458.37459.37460.37461.37462.37463.37464.37465.37466.37467&a=140956564&app=typekit&e=css);@font-face{font-family:montserrat;src:url("https://use.typekit.net/af/32b0e4/00000000000000007735a185/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/32b0e4/00000000000000007735a185/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/32b0e4/00000000000000007735a185/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");font-display:auto;font-style:normal;font-weight:400;font-stretch:normal}@font-face{font-family:montserrat;src:url("https://use.typekit.net/af/bce044/00000000000000007735a186/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3") format("woff2"),url("https://use.typekit.net/af/bce044/00000000000000007735a186/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3") format("woff"),url("https://use.typekit.net/af/bce044/00000000000000007735a186/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3") format("opentype");font-display:auto;font-style:normal;font-weight:200;font-stretch:normal}@font-face{font-family:montserrat;src:url("https://use.typekit.net/af/7ed86d/00000000000000007735a187/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i2&v=3") format("woff2"),url("https://use.typekit.net/af/7ed86d/00000000000000007735a187/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i2&v=3") format("woff"),url("https://use.typekit.net/af/7ed86d/00000000000000007735a187/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i2&v=3") format("opentype");font-display:auto;font-style:italic;font-weight:200;font-stretch:normal}@font-face{font-family:montserrat;src:url("https://use.typekit.net/af/4d6281/00000000000000007735a189/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3") format("woff2"),url("https://use.typekit.net/af/4d6281/00000000000000007735a189/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3") format("woff"),url("https://use.typekit.net/af/4d6281/00000000000000007735a189/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3") format("opentype");font-display:auto;font-style:italic;font-weight:300;font-stretch:normal}@font-face{font-family:montserrat;src:url("https://use.typekit.net/af/c4a610/00000000000000007735a18b/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff2"),url("https://use.typekit.net/af/c4a610/00000000000000007735a18b/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff"),url("https://use.typekit.net/af/c4a610/00000000000000007735a18b/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("opentype");font-display:auto;font-style:normal;font-weight:300;font-stretch:normal}@font-face{font-family:montserrat;src:url("https://use.typekit.net/af/ca31c7/00000000000000007735a18d/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"),url("https://use.typekit.net/af/ca31c7/00000000000000007735a18d/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"),url("https://use.typekit.net/af/ca31c7/00000000000000007735a18d/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");font-display:auto;font-style:italic;font-weight:400;font-stretch:normal}@font-face{font-family:montserrat;src:url("https://use.typekit.net/af/6f175d/00000000000000007735a18f/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff2"),url("https://use.typekit.net/af/6f175d/00000000000000007735a18f/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff"),url("https://use.typekit.net/af/6f175d/00000000000000007735a18f/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("opentype");font-display:auto;font-style:normal;font-weight:500;font-stretch:normal}@font-face{font-family:montserrat;src:url("https://use.typekit.net/af/833d70/00000000000000007735a191/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3") format("woff2"),url("https://use.typekit.net/af/833d70/00000000000000007735a191/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3") format("woff"),url("https://use.typekit.net/af/833d70/00000000000000007735a191/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3") format("opentype");font-display:auto;font-style:italic;font-weight:500;font-stretch:normal}@font-face{font-family:montserrat;src:url("https://use.typekit.net/af/2180b4/00000000000000007735a193/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("woff2"),url("https://use.typekit.net/af/2180b4/00000000000000007735a193/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("woff"),url("https://use.typekit.net/af/2180b4/00000000000000007735a193/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("opentype");font-display:auto;font-style:normal;font-weight:600;font-stretch:normal}@font-face{font-family:montserrat;src:url("https://use.typekit.net/af/89a47a/00000000000000007735a195/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3") format("woff2"),url("https://use.typekit.net/af/89a47a/00000000000000007735a195/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3") format("woff"),url("https://use.typekit.net/af/89a47a/00000000000000007735a195/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3") format("opentype");font-display:auto;font-style:italic;font-weight:600;font-stretch:normal}@font-face{font-family:montserrat;src:url("https://use.typekit.net/af/73dbad/00000000000000007735a197/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/73dbad/00000000000000007735a197/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/73dbad/00000000000000007735a197/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");font-display:auto;font-style:normal;font-weight:700;font-stretch:normal}@font-face{font-family:montserrat;src:url("https://use.typekit.net/af/6d739b/00000000000000007735a19a/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff2"),url("https://use.typekit.net/af/6d739b/00000000000000007735a19a/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff"),url("https://use.typekit.net/af/6d739b/00000000000000007735a19a/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("opentype");font-display:auto;font-style:italic;font-weight:700;font-stretch:normal}.tk-montserrat{font-family:montserrat,sans-serif}</style>
+    <style>@import url("https://p.typekit.net/p.css?s=1&k=vbw7fuq&ht=tk&f=15882.15883&a=268250231&app=typekit&e=css");  @font-face {  font-family:"playfair-display";  src:url("https://use.typekit.net/af/33a252/00000000000000007735a11a/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/33a252/00000000000000007735a11a/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/33a252/00000000000000007735a11a/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");  font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;  }  @font-face {  font-family:"playfair-display";  src:url("https://use.typekit.net/af/3deab6/00000000000000007735a126/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"),url("https://use.typekit.net/af/3deab6/00000000000000007735a126/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"),url("https://use.typekit.net/af/3deab6/00000000000000007735a126/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");  font-display:auto;font-style:italic;font-weight:400;font-stretch:normal;  }  .tk-playfair-display { font-family: "playfair-display",serif; }</style>
+</head>
+<body>
+<div lang="en">
+    <table bgcolor="#F7F6F3" border="0" cellpadding="0" cellspacing="0" class="st-wrapper-table" style="width: 100%;" width="100%">
+        <tbody>
+        <tr>
+            <td align="center" valign="top" width="100%">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" class="st-wrapper st-wrapper-background st-module-wrapper-table" style="width: 600px;" width="600">
+                    <tbody>
+                    <tr>
+                        <td bgcolor="#FFFFFF" style="width: 100%;" valign="top" width="100%">
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" style="width: 100%;" width="100%">
+                                <tbody>
+                                <tr>
+                                    <td align="left" valign="top" width="100%">
+                                        <table align="left" border="0" cellpadding="0" cellspacing="0" style="width: 100%;" width="100%">
+                                            <tbody>
+                                            <tr>
+                                                <td style="width: 600px;" valign="top" width="600">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tbody>
+                                                        <tr>
+                                                            <td align="center" bgcolor="#F2F1E9" class="st-dynamic-suzoml0jg3aqx" style="padding-bottom: 20px; padding-top: 20px; width: 100%;" valign="top" width="100%"><a href="https://www.royalresorts.com/?utm_medium=email&amp;utm_source=awareness&amp;utm_campaign=confirmation_letter" style="display: block;"><img alt="Royal Resorts by Holiday Inn Club Vacations" border="0" class="st-mobile-width-constraint" src="https://www.emailimagecdnk2o9.com/fowbds04k1/en_us/images/69025614f3dbe-1761760788.9989.png" style="border: 0px; display: block; width: 150px; max-width: 100%;" valign="top" width="150" /> </a></td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" valign="top" width="100%">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" class="st-wrapper st-wrapper-background st-module-wrapper-table" style="width: 600px;" width="600">
+                    <tbody>
+                    <tr>
+                        <td bgcolor="#003E74" class="st-dynamic-2yqtb9p032vl8" style="width: 100%; padding: 15px 30px;" valign="top" width="100%">
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" style="width: 100%;" width="100%">
+                                <tbody>
+                                <tr>
+                                    <td align="left" class="st-dynamic-dvlokzg7ftfwq" valign="top" width="100%">
+                                        <table border="0" cellpadding="0" cellspacing="0" class="st-mso-full-width st-mobile-full-width" style="width: 540px;" width="540">
+                                            <tbody>
+                                            <tr>
+                                                <td align="center" valign="top" width="540">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tbody>
+                                                        <tr>
+                                                            <td align="left" class="aligned-bullets st-dynamic-5q93f7hy12cbe" style="text-align: left; font-family: montserrat, Arial, sans-serif; color: #333333; font-size: 14px; font-weight: 400; letter-spacing: normal; line-height: 18px; width: 100%;" valign="top" width="100%">
+                                                                <p style="margin: 0px; text-align: center;"><span style="color: #ffffff; font-size: 14px; line-height: 18px;">Your Reservation Confirmation: \\\BACONFIRMID///</span></p>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" valign="top" width="100%">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" class="st-wrapper st-wrapper-background st-module-wrapper-table" style="width: 600px;" width="600">
+                    <tbody>
+                    <tr>
+                        <td bgcolor="#F2F1E9" style="width: 100%; padding-bottom: 30px; padding-top: 30px;" valign="top" width="100%">
+                            <table border="0" cellpadding="0" cellspacing="0" class="st-mso-full-width st-mobile-full-width" style="width: 600px;" width="600">
+                                <tbody>
+                                <tr>
+                                    <td align="center" valign="top" width="600">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tbody>
+                                            <tr>
+                                                <td align="center" class="st-dynamic-vmzwx86sws1cb" style="padding-left: 30px; padding-right: 30px; width: 100%;" valign="top" width="100%"><img alt="" border="0" class="st-resize" src="https://royalreservations.com/media/img/weddings-and-special-events-royal-resorts_2.jpg" style="border: 0px; display: block; width: 540px; max-width: 100%;" title="" valign="top" width="540" /></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td width="100%" valign="top" align="center">
+                <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center" width="600" class="st-wrapper st-wrapper-background st-module-wrapper-table" style="width: 600px;">
+                    <tr>
+                        <td width="100%" bgcolor="#F2F1E9" valign="top" class="st-dynamic-eupjr8xjbngyq" style="width: 100%; padding-bottom: 30px; padding-left: 60px; padding-right: 60px;">
+                            <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="width: 100%;">
+                                <tr>
+                                    <td width="100%" valign="top" align="left" class="st-dynamic-dvlokzg7ftfwq">
+                                        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="480" class="st-mso-full-width st-mobile-full-width" style="width: 480px;">
+                                            <tr>
+                                                <td align="center" valign="top" width="480">
+                                                    <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                                                        <tr>
+                                                            <td width="100%" valign="top" align="left" class="aligned-bullets st-dynamic-5q93f7hy12cbe" style="text-align: left; font-family: montserrat, Arial, sans-serif; color: #333333; font-size: 14px; font-weight: 400; letter-spacing: normal; line-height: 18px; width: 100%;">
+                                                                <p style="margin: 0px;"><span style="color: #46403f; font-size: 14px; line-height: 18px;">Dear \\\SALUTATION/// \\\FIRSTNAME/// \\\LASTNAME///,<br><br>Thank you for choosing <strong>\\\HOTELNAME///</strong>, for your next vacation. Your preference is highly appreciated and we trust you will have a truly unforgettable experience.</span></p>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="100%" valign="top" align="left" class="st-dynamic-dvlokzg7ftfwq">
+                                        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="480" class="st-mso-full-width st-mobile-full-width" style="width: 480px;">
+                                            <tr>
+                                                <td align="center" valign="top" width="480">
+                                                    <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"> </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" style="padding: 0px; width: 100%;" valign="top" width="100%">
+                <p height="10" style="mso-line-height-rule:exactly; mso-table-lspace:0pt; mso-table-rspace:0pt; text-size-adjust:100%; width: 100%; height: 10px; max-height: 10px; margin: 0px; font-size: 10px; line-height: 10px" width="100%"></p>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" valign="top" width="100%">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" class="st-wrapper st-wrapper-background st-module-wrapper-table" style="width: 600px;" width="600">
+                    <tbody>
+                    <tr>
+                        <td bgcolor="#E1D5C9" class="st-dynamic-i16tf2yqj44eh" style="width: 100%; padding-left: 30px; padding-right: 30px; padding-top: 30px;" valign="top" width="100%">
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" style="width: 100%;" width="100%">
+                                <tbody>
+                                <tr>
+                                    <td align="left" class="st-dynamic-dvlokzg7ftfwq" valign="top" width="100%">
+                                        <table border="0" cellpadding="0" cellspacing="0" class="st-mso-full-width st-mobile-full-width" style="width: 540px;" width="540">
+                                            <tbody>
+                                            <tr>
+                                                <td align="center" valign="top" width="540">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tbody>
+                                                        <tr>
+                                                            <td align="left" class="st-dynamic-5q93f7hy12cbe st-dynamic-6r0hv9h3ozx7g" style="text-align: left; font-family: playfair-display, Georgia, serif; color: #333333; font-size: 28px; font-weight: 500; letter-spacing: normal; line-height: 30px; width: 100%;" valign="top" width="100%">
+                                                                <p style="margin: 0px; text-align: center;"><span style="color: #003e74;">Summary of Your Reservation</span></p>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="left" class="st-dynamic-dvlokzg7ftfwq" valign="top" width="100%">
+                                        <table border="0" cellpadding="0" cellspacing="0" class="st-mso-full-width st-mobile-full-width" style="width: 540px;" width="540">
+                                            <tbody>
+                                            <tr>
+                                                <td align="center" valign="top" width="540">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" valign="top" width="100%">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" class="st-wrapper st-wrapper-background st-module-wrapper-table" style="width: 600px;" width="600">
+                    <tbody>
+                    <tr>
+                        <td bgcolor="#E1D5C9" class="st-dynamic-dvlokzg7ftfwq" style="width: 100%; padding: 15px 30px;" valign="top" width="100%">
+                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="st-mso-full-width st-mobile-full-width" style="width: 540px; float: left;" width="540">
+                                <tbody>
+                                <tr>
+                                    <td align="center" class="st-equal-height st-dynamic-jjbxmngvwiuwl" style="padding-right: 5px; height: auto;" valign="top" width="270">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tbody>
+                                            <tr>
+                                                <td align="left" class="st-dynamic-slnzcznix7p0n" style="text-align: left; font-family: montserrat, Arial, sans-serif; color: #333333; font-size: 14px; font-weight: 400; letter-spacing: normal; line-height: 18px; padding-top: 5px; width: 100%;" valign="top" width="100%">
+                                                    <p style="margin: 0px 0px 16px 0px;"><span style="font-size: 14px; line-height: 18px;"><strong>Adults (+18):</strong> \\\ADULTS///</span></p>
+
+                                                    <p style="margin: 0px 0px 16px 0px;"><span style="font-size: 14px; line-height: 18px;"><strong>Children (0-17):</strong> \\\CHILDREN///</span></p>
+
+                                                    <p style="margin: 0px 0px 16px 0px;"><span style="font-size: 14px; line-height: 18px;"><strong>Room Type:</strong> \\\ROOMTYPE///</span></p>
+
+                                                    <p style="margin: 0px 0px 16px 0px;"><span style="font-size: 14px; line-height: 18px;"><strong>Rate Plan:</strong> \\\RATETYPE///</span></p>
+
+                                                    <p style="margin: 0px 0px 16px 0px;"><span style="font-size: 14px; line-height: 18px;"><strong>Nights:</strong> \\\TOTALSTAY///</span></p>
+
+                                                    <p style="margin: 0px 0px 16px 0px;"><span style="font-size: 14px; line-height: 18px;word-break: break-word"><strong>Special request:</strong> \\\COMMENT///</span></p>
+
+                                                    <p style="margin: 0px 0px 16px 0px;"><span style="font-size: 14px; line-height: 18px;"><strong>Enhancement:</strong> \\\ADDON_FULL///</span></p>
+
+                                                    <p style="margin: 0px;"><span style="font-size: 14px; line-height: 18px;"><strong>Travel Agency:</strong> \\\TAFULLINFO///</span></p>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td align="center" class="st-equal-height st-dynamic-jjbxmngvwiuwl" style="padding-left: 5px; height: auto;" valign="top" width="270">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tbody>
+                                            <tr>
+                                                <td align="left" class="st-dynamic-slnzcznix7p0n" style="text-align: left; font-family: montserrat, Arial, sans-serif; color: #333333; font-size: 14px; font-weight: 400; letter-spacing: normal; line-height: 18px; padding-top: 5px; width: 100%;" valign="top" width="100%">
+                                                    <p style="margin: 0px 0px 16px 0px; text-align: left;"><span style="font-size: 14px; line-height: 18px;"><strong>Check-in Date:</strong> \\\DATEIN///</span></p>
+
+                                                    <p style="margin: 0px 0px 16px 0px; text-align: left;"><span style="font-size: 14px; line-height: 18px;"><strong>Check-out Date:</strong> \\\DATEOUT///</span></p>
+
+                                                    <p style="margin: 0px 0px 16px 0px; text-align: left;"><span style="font-size: 14px; line-height: 18px;"><strong>Taxes:</strong> \\\AMOUNT_TAX///</span></p>
+
+                                                    <p style="margin: 0px; text-align: left;"><span style="font-size: 14px; line-height: 18px; color: #46403f;"><strong>Total Charge:</strong> <strong>\\\AMOUNT_TOTAL///</strong></span></p>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" style="padding: 0px; width: 100%;" valign="top" width="100%">
+                <p height="10" style="mso-line-height-rule:exactly; mso-table-lspace:0pt; mso-table-rspace:0pt; text-size-adjust:100%; width: 100%; height: 10px; max-height: 10px; margin: 0px; font-size: 10px; line-height: 10px" width="100%"></p>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" valign="top" width="100%">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" class="st-wrapper st-wrapper-background st-module-wrapper-table" style="width: 600px;" width="600">
+                    <tbody>
+                    <tr>
+                        <td bgcolor="#F2F1E9" class="st-dynamic-61az3pfemfnp1" style="width: 100%; padding: 30px 60px;" valign="top" width="100%">
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" style="width: 100%;" width="100%">
+                                <tbody>
+                                <tr>
+                                    <td align="left" class="st-dynamic-dvlokzg7ftfwq" valign="top" width="100%">
+                                        <table border="0" cellpadding="0" cellspacing="0" class="st-mso-full-width st-mobile-full-width" style="width: 480px;" width="480">
+                                            <tbody>
+                                            <tr>
+                                                <td align="center" valign="top" width="480">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tbody>
+                                                        <tr>
+                                                            <td align="left" class="aligned-bullets st-dynamic-5q93f7hy12cbe st-dynamic-6r0hv9h3ozx7g" style="text-align: left; font-family: montserrat, Arial, sans-serif; color: #333333; font-size: 16px; font-weight: 400; letter-spacing: normal; line-height: 20px; width: 100%;" valign="top" width="100%">
+                                                                <p style="margin: 0px;">If you need to modify your reservation please click on the following <a style="text-decoration: none;font-weight: 600;color: #333333" href="https://reservations.travelclick.com/86169?confirmid=\\\BACONFIRMID///&amp;languageid=en">link</a>. If you need further assistance or have any special requirement do not hesitate to contact our Customer Service Department:</p>
+
+                                                                <p style="margin: 0px;">‌</p>
+
+                                                                <p style="margin: 0px; text-align: center;">Toll Free : <span style="color: #003e74;"><a class="st-no-tracking" href="tel:18887214420" style="color: #003e74;"><span style="text-decoration: underline;">+1 (888) 721-4420</span></a></span></p>
+
+                                                                <p style="margin: 0px; text-align: center;">Mexico: <span style="color: #003e74;"><a class="st-no-tracking" style="color: #003e74;" href="tel:528000201761"><span style="text-decoration: underline;">+52 (800) 020-1761</span></a></span></p>
+
+                                                                <p style="margin: 0px; text-align: center;">Elsewhere: <span style="color: #003e74;"><a class="st-no-tracking" style="color: #003e74;" href="tel:19547365815"><span style="text-decoration: underline;">+1 (954) 736-5815</span></a></span></p>
+
+                                                                <p style="margin: 0px; text-align: center;">‌</p>
+
+                                                                <p style="margin: 0px; text-align: center;">Email: <span style="color: #003e74;"><a class="st-no-tracking" href="mailto:ask4help@royalresorts.com" style="color: #003e74;"><span style="text-decoration: underline;">ask4help@royalresorts.com</span></a></span></p>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="left" class="st-dynamic-dvlokzg7ftfwq" valign="top" width="100%">
+                                        <table border="0" cellpadding="0" cellspacing="0" class="st-mso-full-width st-mobile-full-width" style="width: 480px;" width="480">
+                                            <tbody>
+                                            <tr>
+                                                <td align="center" valign="top" width="480">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" style="padding: 0px; width: 100%;" valign="top" width="100%">
+                <p height="10" style="mso-line-height-rule:exactly; mso-table-lspace:0pt; mso-table-rspace:0pt; text-size-adjust:100%; width: 100%; height: 10px; max-height: 10px; margin: 0px; font-size: 10px; line-height: 10px" width="100%"></p>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" valign="top" width="100%">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" class="st-wrapper st-wrapper-background st-module-wrapper-table" style="width: 600px;" width="600">
+                    <tbody>
+                    <tr>
+                        <td bgcolor="#E1D5C9" class="st-dynamic-61az3pfemfnp1" style="width: 100%; padding-left: 30px; padding-right: 30px; padding-top: 30px;" valign="top" width="100%">
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" style="width: 100%;" width="100%">
+                                <tbody>
+                                <tr>
+                                    <td align="left" class="st-dynamic-dvlokzg7ftfwq" valign="top" width="100%">
+                                        <table border="0" cellpadding="0" cellspacing="0" class="st-mso-full-width st-mobile-full-width" style="width: 540px;" width="540">
+                                            <tbody>
+                                            <tr>
+                                                <td align="center" valign="top" width="540">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tbody>
+                                                        <tr>
+                                                            <td align="left" class="st-dynamic-5q93f7hy12cbe st-dynamic-6r0hv9h3ozx7g" style="text-align: left; font-family: playfair-display, Georgia, serif; color: #333333; font-size: 28px; font-weight: 500; letter-spacing: normal; line-height: 30px; width: 100%;" valign="top" width="100%">
+                                                                <p style="margin: 0px; text-align: center;"><span style="color: #003e74;">Hotel Information</span></p>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" valign="top" width="100%">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" class="st-wrapper st-wrapper-background st-module-wrapper-table" style="width: 600px;" width="600">
+                    <tbody>
+                    <tr>
+                        <td bgcolor="#E1D5C9" class="st-dynamic-dvlokzg7ftfwq" style="width: 100%; padding: 30px 40px;" valign="top" width="100%">
+                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="st-mso-full-width st-mobile-full-width" style="width: 520px; float: left;" width="520">
+                                <tbody>
+                                <tr>
+                                    <td align="center" class="st-equal-height st-dynamic-mcyqrsah9xaq7" style="padding-right: 5px; height: auto;" valign="top" width="260">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tbody>
+                                            <tr>
+                                                <td align="left" class="st-dynamic-slnzcznix7p0n" style="text-align: left; font-family: montserrat, Arial, sans-serif; color: #333333; font-size: 14px; font-weight: 400; letter-spacing: normal; line-height: 18px; width: 100%;" valign="top" width="100%">
+                                                    <p style="margin: 0px;"><span style="font-size: 14px; line-height: 18px;"><strong>Address</strong>:</span></p>
+
+                                                    <p style="margin: 0px;"><span style="font-size: 14px; line-height: 18px;">\\\HOTELADDRESS///</span></p>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td align="center" class="st-equal-height st-dynamic-jjbxmngvwiuwl" style="padding-left: 5px; height: auto;" valign="top" width="260">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tbody>
+                                            <tr>
+                                                <td align="left" class="st-dynamic-slnzcznix7p0n" style="text-align: left; font-family: montserrat, Arial, sans-serif; color: #333333; font-size: 14px; font-weight: 400; letter-spacing: normal; line-height: 18px; width: 100%;" valign="top" width="100%">
+                                                    <p style="margin: 0px; text-align: left;"><span style="font-size: 14px; line-height: 18px;"><strong>Check-In Time: </strong>\\\CHECKINHOUR///</span></p>
+
+                                                    <p style="margin: 0px; text-align: left;">‌</p>
+
+                                                    <p style="margin: 0px; text-align: left;"><span style="font-size: 14px; line-height: 18px;"><strong>Check-Out Time: </strong>\\\CHECKOUTHOUR///</span></p>
+
+                                                    <p style="margin: 0px; text-align: left;">‌</p>
+
+                                                    <p style="margin: 0px; text-align: left;"><span style="font-size: 14px; line-height: 18px;"><strong>Phone:</strong> \\\HOTELPHONE///</span></p>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" style="padding: 0px; width: 100%;" valign="top" width="100%">
+                <p height="10" style="mso-line-height-rule:exactly; mso-table-lspace:0pt; mso-table-rspace:0pt; text-size-adjust:100%; width: 100%; height: 10px; max-height: 10px; margin: 0px; font-size: 10px; line-height: 10px" width="100%"></p>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" valign="top" width="100%">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" class="st-wrapper st-wrapper-background st-module-wrapper-table" style="width: 600px;" width="600">
+                    <tbody>
+                    <tr>
+                        <td bgcolor="#F2F1E9" class="st-dynamic-i16tf2yqj44eh" style="width: 100%; padding-left: 30px; padding-right: 30px; padding-top: 30px;" valign="top" width="100%">
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" style="width: 100%;" width="100%">
+                                <tbody>
+                                <tr>
+                                    <td align="left" class="st-dynamic-dvlokzg7ftfwq" valign="top" width="100%">
+                                        <table border="0" cellpadding="0" cellspacing="0" class="st-mso-full-width st-mobile-full-width" style="width: 540px;" width="540">
+                                            <tbody>
+                                            <tr>
+                                                <td align="center" valign="top" width="540">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tbody>
+                                                        <tr>
+                                                            <td align="left" class="st-dynamic-5q93f7hy12cbe st-dynamic-6r0hv9h3ozx7g" style="text-align: left; font-family: playfair-display, Georgia, serif; color: #333333; font-size: 28px; font-weight: 500; letter-spacing: normal; line-height: 30px; width: 100%;" valign="top" width="100%">
+                                                                <p style="margin: 0px; text-align: center;"><span style="color: #003e74;">Payment & Cancellation Policy</span></p>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="left" class="st-dynamic-dvlokzg7ftfwq" valign="top" width="100%">
+                                        <table border="0" cellpadding="0" cellspacing="0" class="st-mso-full-width st-mobile-full-width" style="width: 540px;" width="540">
+                                            <tbody>
+                                            <tr>
+                                                <td align="center" valign="top" width="540">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" valign="top" width="100%">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" class="st-wrapper st-wrapper-background st-module-wrapper-table" style="width: 600px;" width="600">
+                    <tbody>
+                    <tr>
+                        <td bgcolor="#F2F1E9" class="st-dynamic-dvlokzg7ftfwq" style="width: 100%; padding-bottom: 30px; padding-left: 40px; padding-right: 40px;" valign="top" width="100%">
+                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="st-mso-full-width st-mobile-full-width" style="width: 520px; float: left;" width="520">
+                                <tbody>
+                                <tr>
+                                    <td align="center" class="st-equal-height st-dynamic-mcyqrsah9xaq7" style="padding-right: 5px; height: auto;" valign="top" width="260">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tbody>
+                                            <tr>
+                                                <td align="left" class="st-dynamic-slnzcznix7p0n" style="text-align: left; font-family: montserrat, Arial, sans-serif; color: #333333; font-size: 14px; font-weight: 400; letter-spacing: normal; line-height: 18px; padding-top: 30px; width: 100%;" valign="top" width="100%">
+                                                    <p style="margin: 0px;"><span style="font-size: 14px; line-height: 18px;"><strong>Deposit Policy: </strong>\\\DEPOSIT_POLICY///</span></p>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td align="center" class="st-equal-height st-dynamic-c4k4igpakza1g"  style="padding-left: 5px; height: auto;" valign="top" width="260">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tbody>
+                                            <tr>
+                                                <td align="left" class="st-dynamic-eupjr8xjbngyq" style="text-align: left; font-family: montserrat, Arial, sans-serif; color: #333333; font-size: 14px; font-weight: 400; letter-spacing: normal; line-height: 18px; padding-top: 30px; width: 100%;" valign="top" width="100%">
+                                                    <p style="margin: 0px; text-align: left;"><span style="font-size: 14px; line-height: 18px;"><strong>Cancellation Policy: </strong>\\\CANCELLATION_POLICY///</span></p>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" style="padding: 0px; width: 100%;" valign="top" width="100%">
+                <p height="10" style="mso-line-height-rule:exactly; mso-table-lspace:0pt; mso-table-rspace:0pt; text-size-adjust:100%; width: 100%; height: 10px; max-height: 10px; margin: 0px; font-size: 10px; line-height: 10px" width="100%"></p>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" valign="top" width="100%">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" class="st-wrapper st-wrapper-background st-module-wrapper-table" style="width: 600px;" width="600">
+                    <tbody>
+                    <tr>
+                        <td bgcolor="#E1D5C9" class="st-dynamic-61az3pfemfnp1" style="width: 100%; padding-left: 30px; padding-right: 30px; padding-top: 30px;" valign="top" width="100%">
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" style="width: 100%;" width="100%">
+                                <tbody>
+                                <tr>
+                                    <td align="left" class="st-dynamic-dvlokzg7ftfwq" valign="top" width="100%">
+                                        <table border="0" cellpadding="0" cellspacing="0" class="st-mso-full-width st-mobile-full-width" style="width: 540px;" width="540">
+                                            <tbody>
+                                            <tr>
+                                                <td align="center" valign="top" width="540">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tbody>
+                                                        <tr>
+                                                            <td align="left" class="st-dynamic-5q93f7hy12cbe st-dynamic-6r0hv9h3ozx7g" style="text-align: left; font-family: playfair-display, Georgia, serif; color: #333333; font-size: 28px; font-weight: 500; letter-spacing: normal; line-height: 30px; width: 100%;" valign="top" width="100%">
+                                                                <p style="margin: 0px; text-align: center;"><span style="color: #003e74;">Group Information</span></p>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" valign="top" width="100%">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" class="st-wrapper st-wrapper-background st-module-wrapper-table" style="width: 600px;" width="600">
+                    <tbody>
+                    <tr>
+                        <td bgcolor="#E1D5C9" class="st-dynamic-dvlokzg7ftfwq" style="width: 100%; padding: 30px 40px;" valign="top" width="100%">
+                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="st-mso-full-width st-mobile-full-width" style="width: 520px; float: left;" width="520">
+                                <tbody>
+                                <tr>
+                                    <td align="center" class="st-equal-height st-dynamic-jjbxmngvwiuwl" height="18.0078" style="padding-right: 5px; height: auto;" valign="top" width="520">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tbody>
+                                            <tr>
+                                                <td align="left" class="st-dynamic-slnzcznix7p0n" style="text-align: left; font-family: montserrat, Arial, sans-serif; color: #333333; font-size: 14px; font-weight: 400; letter-spacing: normal; line-height: 18px; width: 100%;" valign="top" width="100%">
+                                                    <p style="margin: 0px;"><span style="font-size: 14px; line-height: 18px;">  \\\GROUP///</span></p>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" style="padding: 0px; width: 100%;" valign="top" width="100%">
+                <p height="10" style="mso-line-height-rule:exactly; mso-table-lspace:0pt; mso-table-rspace:0pt; text-size-adjust:100%; width: 100%; height: 10px; max-height: 10px; margin: 0px; font-size: 10px; line-height: 10px" width="100%"></p>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" valign="top" width="100%">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" class="st-wrapper st-wrapper-background st-module-wrapper-table" style="width: 600px;" width="600">
+                    <tbody>
+                    <tr>
+                        <td bgcolor="#F2F1E9" class="st-dynamic-61az3pfemfnp1" style="width: 100%; padding-left: 30px; padding-right: 30px; padding-top: 30px;" valign="top" width="100%">
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" style="width: 100%;" width="100%">
+                                <tbody>
+                                <tr>
+                                    <td align="left" class="st-dynamic-dvlokzg7ftfwq" valign="top" width="100%">
+                                        <table border="0" cellpadding="0" cellspacing="0" class="st-mso-full-width st-mobile-full-width" style="width: 540px;" width="540">
+                                            <tbody>
+                                            <tr>
+                                                <td align="center" valign="top" width="540">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tbody>
+                                                        <tr>
+                                                            <td align="left" class="st-dynamic-5q93f7hy12cbe st-dynamic-6r0hv9h3ozx7g" style="text-align: left; font-family: playfair-display, Georgia, serif; color: #333333; font-size: 28px; font-weight: 500; letter-spacing: normal; line-height: 30px; width: 100%;" valign="top" width="100%">
+                                                                <p style="margin: 0px; text-align: center;"><span style="color: #003e74;">Room Description</span></p>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" valign="top" width="100%">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" class="st-wrapper st-wrapper-background st-module-wrapper-table" style="width: 600px;" width="600">
+                    <tbody>
+                    <tr>
+                        <td bgcolor="#F2F1E9" class="st-dynamic-dvlokzg7ftfwq" style="width: 100%; padding: 30px 40px;" valign="top" width="100%">
+                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="st-mso-full-width st-mobile-full-width" style="width: 520px; float: left;" width="520">
+                                <tbody>
+                                <tr>
+                                    <td align="center" class="st-equal-height st-dynamic-jjbxmngvwiuwl" height="18.0078" style="padding-right: 5px; height: auto;" valign="top" width="520">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tbody>
+                                            <tr>
+                                                <td align="left" class="st-dynamic-slnzcznix7p0n" style="text-align: left; font-family: montserrat, Arial, sans-serif; color: #333333; font-size: 14px; font-weight: 400; letter-spacing: normal; line-height: 18px; width: 100%;" valign="top" width="100%">
+                                                    <p style="margin: 0px;"><span style="font-size: 14px; line-height: 18px;">  \\\ROOMDESC///</span></p>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" style="padding: 0px; width: 100%;" valign="top" width="100%">
+                <p height="10" style="mso-line-height-rule:exactly; mso-table-lspace:0pt; mso-table-rspace:0pt; text-size-adjust:100%; width: 100%; height: 10px; max-height: 10px; margin: 0px; font-size: 10px; line-height: 10px" width="100%"></p>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" valign="top" width="100%">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" class="st-wrapper st-wrapper-background st-module-wrapper-table" style="width: 600px;" width="600">
+                    <tbody>
+                    <tr>
+                        <td bgcolor="#E1D5C9" class="st-dynamic-61az3pfemfnp1" style="width: 100%; padding-left: 30px; padding-right: 30px; padding-top: 30px;" valign="top" width="100%">
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" style="width: 100%;" width="100%">
+                                <tbody>
+                                <tr>
+                                    <td align="left" class="st-dynamic-dvlokzg7ftfwq" valign="top" width="100%">
+                                        <table border="0" cellpadding="0" cellspacing="0" class="st-mso-full-width st-mobile-full-width" style="width: 540px;" width="540">
+                                            <tbody>
+                                            <tr>
+                                                <td align="center" valign="top" width="540">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tbody>
+                                                        <tr>
+                                                            <td align="left" class="st-dynamic-5q93f7hy12cbe st-dynamic-6r0hv9h3ozx7g" style="text-align: left; font-family: playfair-display, Georgia, serif; color: #333333; font-size: 28px; font-weight: 500; letter-spacing: normal; line-height: 30px; width: 100%;" valign="top" width="100%">
+                                                                <p style="margin: 0px; text-align: center;"><span style="color: #003e74;">Promotion Detail</span></p>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" valign="top" width="100%">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" class="st-wrapper st-wrapper-background st-module-wrapper-table" style="width: 600px;" width="600">
+                    <tbody>
+                    <tr>
+                        <td bgcolor="#E1D5C9" class="st-dynamic-dvlokzg7ftfwq" style="width: 100%; padding: 30px 40px;" valign="top" width="100%">
+                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="st-mso-full-width st-mobile-full-width" style="width: 520px; float: left;" width="520">
+                                <tbody>
+                                <tr>
+                                    <td align="center" class="st-equal-height st-dynamic-jjbxmngvwiuwl" style="padding-right: 5px; height: auto;" valign="top" width="520">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tbody>
+                                            <tr>
+                                                <td align="left" class="st-dynamic-slnzcznix7p0n" style="text-align: left; font-family: montserrat, Arial, sans-serif; color: #333333; font-size: 14px; font-weight: 400; letter-spacing: normal; line-height: 18px; width: 100%;" valign="top" width="100%">
+                                                    <p style="margin: 0px;"><span style="font-size: 14px; line-height: 18px;">  \\\RATEDESC///</span></p>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" style="padding: 0px; width: 100%;" valign="top" width="100%">
+                <p height="10" style="mso-line-height-rule:exactly; mso-table-lspace:0pt; mso-table-rspace:0pt; text-size-adjust:100%; width: 100%; height: 10px; max-height: 10px; margin: 0px; font-size: 10px; line-height: 10px" width="100%"></p>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" valign="top" width="100%">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" class="st-wrapper st-wrapper-background st-module-wrapper-table" style="width: 600px;" width="600">
+                    <tbody>
+                    <tr>
+                        <td bgcolor="#F2F1E9" class="st-dynamic-61az3pfemfnp1" style="width: 100%; padding-left: 30px; padding-right: 30px; padding-top: 30px;" valign="top" width="100%">
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" style="width: 100%;" width="100%">
+                                <tbody>
+                                <tr>
+                                    <td align="left" class="st-dynamic-dvlokzg7ftfwq" valign="top" width="100%">
+                                        <table border="0" cellpadding="0" cellspacing="0" class="st-mso-full-width st-mobile-full-width" style="width: 540px;" width="540">
+                                            <tbody>
+                                            <tr>
+                                                <td align="center" valign="top" width="540">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tbody>
+                                                        <tr>
+                                                            <td align="left" class="st-dynamic-5q93f7hy12cbe st-dynamic-6r0hv9h3ozx7g" style="text-align: left; font-family: playfair-display, Georgia, serif; color: #333333; font-size: 28px; font-weight: 500; letter-spacing: normal; line-height: 30px; width: 100%;" valign="top" width="100%">
+                                                                <p style="margin: 0px; text-align: center;"><span style="color: #003e74;">Hotel Policies</span></p>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" valign="top" width="100%">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" class="st-wrapper st-wrapper-background st-module-wrapper-table" style="width: 600px;" width="600">
+                    <tbody>
+                    <tr>
+                        <td bgcolor="#F2F1E9" class="st-dynamic-dvlokzg7ftfwq" style="width: 100%; padding: 30px 40px;" valign="top" width="100%">
+                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="st-mso-full-width st-mobile-full-width" style="width: 520px; float: left;" width="520">
+                                <tbody>
+                                <tr>
+                                    <td align="center" class="st-equal-height st-dynamic-jjbxmngvwiuwl" height="18.0078" style="padding-right: 5px; height: auto;" valign="top" width="520">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tbody>
+                                            <tr>
+                                                <td align="left" class="st-dynamic-slnzcznix7p0n" style="text-align: left; font-family: montserrat, Arial, sans-serif; color: #333333; font-size: 14px; font-weight: 400; letter-spacing: normal; line-height: 18px; width: 100%;" valign="top" width="100%">
+                                                    <p style="margin: 0px;">  \\\TERMS_AND_CONDITIONS///</p>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" style="padding: 0px; width: 100%;" valign="top" width="100%">
+                <p height="10" style="mso-line-height-rule:exactly; mso-table-lspace:0pt; mso-table-rspace:0pt; text-size-adjust:100%; width: 100%; height: 10px; max-height: 10px; margin: 0px; font-size: 10px; line-height: 10px" width="100%"></p>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" style="width: 100%; max-width: 600px" valign="top" width="100%">
+                <p height="10" style="mso-line-height-rule:exactly; mso-table-lspace:0pt; mso-table-rspace:0pt; text-size-adjust:100%; width: 100%;max-width: 600px; height: 10px; max-height: 10px; background-color: #003e74; margin: 0px; font-size: 10px; line-height: 10px" width="100%"></p>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" valign="top" width="100%">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" class="st-wrapper st-wrapper-background st-module-wrapper-table" style="width: 600px;" width="600">
+                    <tbody>
+                    <tr>
+                        <td bgcolor="#F2F1E9" style="width: 100%;" valign="top" width="100%">
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" style="width: 100%;" width="100%">
+                                <tbody>
+                                <tr>
+                                    <td align="left" class="st-dynamic-bouqkvht2w6do" style="padding-left: 40px; padding-top: 25px; padding-right: 40px;" valign="top" width="100%">
+                                        <table align="left" border="0" cellpadding="0" cellspacing="0" style="width: 100%;" width="100%">
+                                            <tbody>
+                                            <tr>
+                                                <td style="width: 374px;" valign="middle" width="374">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tbody>
+                                                        <tr>
+                                                            <td align="left" class="st-dynamic-fn9lugmv73ogf" style="width: 100%;" valign="top" width="100%"><a href="https://www.royalresorts.com" style="display: block;"><img alt="Royal Resorts by Holiday Inn Club Vacations" border="0" class="st-mobile-width-constraint" height="37" src="https://www.emailimagecdnk2o9.com/fowbds04k1/en_us/images/6986002ac085b-1770389546.7886.png" style="border: 0px; display: block; width: 200px; max-width: 100%;" valign="top" width="200" /> </a></td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td style="width: 36px;" valign="middle" width="36">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tbody>
+                                                        <tr>
+                                                            <td align="right" class="st-dynamic-hdq3xvu8ugbq5" style="padding-left: 7px; width: 100%;" valign="top" width="100%"><a href="https://www.facebook.com/royalresort" style="display: block;"><img alt="Facebook" border="0" class="st-mobile-width-constraint" height="22" src="https://www.emailimagecdnk2o9.com/fowbds04k1/en_us/images/69810f6a0d7b5-1770065770.0552.png" style="border: 0px; display: block; width: 22px; max-width: 100%;" valign="top" width="22" /> </a></td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td style="width: 36px;" valign="middle" width="36">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tbody>
+                                                        <tr>
+                                                            <td align="right" class="st-dynamic-hdq3xvu8ugbq5" style="padding-left: 7px; width: 100%;" valign="top" width="100%"><a href="https://www.instagram.com/royalresorts" style="display: block;"><img alt="Instagram" border="0" class="st-mobile-width-constraint" height="22" src="https://www.emailimagecdnk2o9.com/fowbds04k1/en_us/images/69810f74e3fec-1770065780.9339.png" style="border: 0px; display: block; width: 22px; max-width: 100%;" valign="top" width="22" /> </a></td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td style="width: 36px;" valign="middle" width="36">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tbody>
+                                                        <tr>
+                                                            <td align="right" class="st-dynamic-hdq3xvu8ugbq5" style="padding-left: 10px; width: 100%;" valign="top" width="100%"><a href="http://tiktok.com/@royalreservations" style="display: block;"><img alt="TikTok" border="0" class="st-mobile-width-constraint" height="22" src="https://www.emailimagecdnk2o9.com/fowbds04k1/en_us/images/69810f8951753-1770065801.3337.png" style="border: 0px; display: block; width: 22px; max-width: 100%;" valign="top" width="22" /> </a></td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td style="width: 38px;" valign="middle" width="38">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tbody>
+                                                        <tr>
+                                                            <td align="right" class="st-dynamic-hdq3xvu8ugbq5" style="padding-left: 7px; width: 100%;" valign="top" width="100%"><a href="https://www.youtube.com/channel/UCVPOzZcFIe5-2xy3J1bdHEQ/featured" style="display: block;"><img alt="YouTube" border="0" class="st-mobile-width-constraint" height="22" src="https://www.emailimagecdnk2o9.com/fowbds04k1/en_us/images/69810f92ca9e3-1770065810.8299.png" style="border: 0px; display: block; width: 22px; max-width: 100%;" valign="top" width="22" /> </a></td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="left" class="st-dynamic-lu6sw6hyqy75w" style="padding-left: 40px; padding-right: 40px;" valign="top" width="100%">
+                                        <table border="0" cellpadding="0" cellspacing="0" class="st-mso-full-width st-mobile-full-width" style="width: 520px;" width="520">
+                                            <tbody>
+                                            <tr>
+                                                <td align="center" valign="top" width="520">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tbody>
+                                                        <tr>
+                                                            <td align="center" style="padding-top: 25px; padding-bottom: 25px; width: 100%;" valign="top" width="100%">
+                                                                <p height="1" style="mso-line-height-rule:exactly; mso-table-lspace:0pt; mso-table-rspace:0pt; text-size-adjust:100%; width: 100%; height: 1px; max-height: 1px; background-color: #666666; margin: 0px; font-size: 1px; line-height: 1px" width="100%"></p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" class="st-dynamic-5q93f7hy12cbe" style="text-align: left; font-family: montserrat, Arial, sans-serif; color: #666666; font-size: 12px; font-weight: 500; letter-spacing: 0.05em; line-height: 12px; padding-left: 40px; padding-right: 40px; width: 100%;" valign="top" width="100%">
+                                                                <p style="margin: 0px 0px 16px 0px; text-align: center;"><span style="font-size: 12px; line-height: 12px; color: #666666;"><a href="https://www.royalresorts.com/about-royal-resorts?utm_medium=email&amp;utm_source=awareness&amp;utm_campaign=confirmation_letter" style="color: #666666;"><span style="color: #666666;">About Us</span></a> | <a href="https://www.royalresorts.com/beach-destinations?utm_medium=email&amp;utm_source=awareness&amp;utm_campaign=confirmation_letter" style="color: #666666;"><span style="color: #666666;">See Our Resorts</span></a></span></p>
+
+                                                                <p style="text-align: center; margin: 0px 0px 8px 0px;"><span style="font-size: 12px; line-height: 12px;">Toll Free: <a style="color: #666666;text-decoration: none" href="tel:18888387842"><span style="color: #666666;">+1 (888) 838-7842</span></a> | Mexico: <a style="color: #666666;text-decoration: none;" href="tel:528000201761"><span style="color: #666666;">+52 (800) 020-1761</span></a></span></p>
+
+                                                                <p style="text-align: center; margin: 0px;"><span style="font-size: 12px; line-height: 12px;">Elsewhere: <a style="color: #666666;text-decoration: none;" href="tel:9547365871"><span style="color: #666666;">(954) 736-5871</span></a></span></p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center" class="st-dynamic-gdlt7042vnxz0" style="width: 100%;" valign="top" width="100%">
+                                                                <p height="1" style="mso-line-height-rule:exactly; mso-table-lspace:0pt; mso-table-rspace:0pt; text-size-adjust:100%; width: 100%; height: 1px; max-height: 1px; background-color: #666666; margin: 32px 0px 32px 0px; font-size: 1px; line-height: 1px" width="100%"></p>
+                                                                <img alt="" border="0" class="st-mobile-width-constraint" src="https://image.email.royalresorts.com/lib/fe38157075640578721372/m/1/b67fec7d-d6f0-438c-a193-f65778a1d607.png?variable_group_id=&cpn_exp=&cpn_num=&pkg=&id=&anchor=&utm_medium=email&utm_source=awareness&utm_campaign=%25%25emailname_%25%25" style="border: 0px; display: block; width: 400px; max-width: 100%;" valign="top" width="400" />
+                                                                <p height="1" style="mso-line-height-rule:exactly; mso-table-lspace:0pt; mso-table-rspace:0pt; text-size-adjust:100%; width: 100%; height: 1px; max-height: 1px; background-color: #666666; margin: 32px 0px 32px 0px; font-size: 1px; line-height: 1px" width="100%"></p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" style="text-align: left; font-family: montserrat, Arial, sans-serif; color: #666666; font-size: 12px; font-weight: normal; letter-spacing: normal; line-height: 15px; padding-bottom: 14px; width: 100%;" valign="top" width="100%">
+
+                                                                <p style="margin: 0px;"><span style="font-size: 12px; line-height: 15px;">HICV Development Company, LLC, the "Holiday Inn Club" program, and the Holiday Inn Club Vacations® resorts are independently owned, operated, and marketed and are not owned, operated, or marketed by any lnterContinental Hotels Group ("IHG") companies, or by IHG One Rewards, or by the owner or licensor of the Holiday Inn® brand. IHG is the owner of the Holiday Inn and IHG One Rewards trademarks and both are used herein with permission of IHG. Otherwise, the owner of the IHG One Rewards program is not affiliated with the owner of the Holiday Inn Club program and reserves the right to change, limit, modify, or cancel the IHG One Rewards program terms and conditions.</span></p>
+
+                                                                <p style="mso-line-height-rule:exactly; mso-table-lspace:0pt; mso-table-rspace:0pt; text-size-adjust:100%; width: 100%; height: 1px; max-height: 1px; background-color: #666666; margin: 25px 0px 25px 0px; font-size: 1px; line-height: 1px" width="100%"></p>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="left" class="st-dynamic-qwnv3jdc2fokx" style="padding-left: 40px; padding-right: 40px; padding-bottom: 35px;" valign="top" width="100%">
+                                        <table border="0" cellpadding="0" cellspacing="0" class="st-mso-full-width st-mobile-full-width" style="width: 520px;" width="520">
+                                            <tbody>
+                                            <tr>
+                                                <td align="center" valign="top" width="520">
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                        <tbody>
+                                                        <tr>
+                                                            <td align="left" style="text-align: left; font-family: montserrat, Arial, sans-serif; color: #666666; font-size: 12px; font-weight: normal; letter-spacing: normal; line-height: 15px; padding-bottom: 25px; width: 100%;" valign="top" width="100%">
+                                                                <p style="margin: 0px; text-align: center;"><span style="font-size: 12px; line-height: 15px;">This email was sent to: \\\EMAIL///</span></p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center" class="__scope__i58ip" style="width: 100%;" valign="top" width="100%">
+                                                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                                    <tbody>
+                                                                    <tr>
+                                                                        <td style="font-family: montserrat, Arial, sans-serif; text-align: center; font-size: 12px; font-weight:500;"><span style="color:#666666; letter-spacing: 0.25px;"><a href="https://www.royalresorts.com/privacy-policy"  target="_blank" style="color:#666666;text-decoration: none">Privacy Policy</a></span>
+                                                                            <p style="margin: 32px 0px 16px 0px; text-align: center; font-family: montserrat, Arial, sans-serif; color: #666666; font-size: 12px; font-weight: normal; letter-spacing: normal; line-height: 15px;"><span style="font-size: 12px; line-height: 15px;">This email was sent by:<br />
+																		Royal Resorts by Holiday Inn Club Vacations Incorporated<br />
+																		9271 S. John Young Pkwy, Orlando, FL 32819, US</span></p>
+                                                                        </td>
+                                                                    </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
